@@ -27,11 +27,11 @@ public class Game {
             (userOption.equals("paper") && computerOption.equals("rock")) ||
             (userOption.equals("scissors") && computerOption.equals("paper"))
         ) {
-            return "User";
+            return "User win!";
         } else if (userOption.equals(computerOption)) {
-            return "Draw";
+            return "Draw!";
         } else {
-            return "Computer";
+            return "Computer win!";
         }
     }
 }
