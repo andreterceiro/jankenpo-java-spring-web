@@ -2,7 +2,6 @@ package br.com.terceiro.jankenpo.controllers;
 
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -19,10 +18,10 @@ public class GameController {
         return ResponseEntity.ok("Game started!");
     }
 
-    @GetMapping("/result/{option}")
-    public ResponseEntity<String> result(@PathVariable String option) {
+    @PostMapping("/result")
+    public ResponseEntity<String> result(@RequestBody String userOption) {
         try {
-            return ResponseEntity.ok(Game.getWinner(option).concat(" win!"));
+            return ResponseEntity.ok(Game.getWinner(userOption));
         } catch (Exception e) {
             return ResponseEntity.status(422).body("Please select a valid option");
         }
