@@ -1,16 +1,16 @@
 package br.com.terceiro.jankenpo.controllers;
 
 import org.springframework.http.ResponseEntity;
+import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
 
 import br.com.terceiro.jankenpo.models.Game;
 
 
-@RestController
+@Controller
 @RequestMapping("game")
 public class GameController {
     @GetMapping("/play")
