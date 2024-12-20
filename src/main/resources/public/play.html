@@ -1,0 +1,62 @@
+<html>
+    <head>
+        <title>Jankenpo</title>
+        <meta charset="utf-8">
+        <style>
+            .option {
+                border: 1px solid #000;
+                margin-left: 30px;
+                margin-top: 30px;
+            }
+        </style>
+    </head>
+    <body>
+        <div>
+            Please click in your option:
+            <hr />
+            <span>
+                <img src="assets/paper.png" class="option" onclick="process('paper')" />
+            </span>
+            <span>
+                <img src="assets/rock.png" class="option" onclick="process('rock')" />
+            </span>
+            <span>
+                <img src="assets/scissors.png" class="option" onclick="process('scissors')" />
+            </span>
+        </div>
+        <script>
+            /**
+             * Alert who is the winner
+             * user parameter choice x computer random choice 
+             * 
+             * @param {string} userChoice The choice of the user
+             *
+             * @return {null}
+             */
+            async function process(userChoice) {
+                if (userChoice != "paper" && userChoice != "rock" && userChoice != "scissors") {
+                    alert("Please select your choice.");
+                    return;
+                }
+
+                const response = await fetch("/game/result", 
+                    {
+                        method: "POST",
+                        headers: {
+                            'Content-Type': 'application/json'
+                        },
+                        body: userChoice
+                    }
+                );
+
+                if (!response.ok) {
+                    alert("Error occurred while processing your request.");
+                    return;
+                }
+
+                const result = await response;
+                alert(await result.text())
+            }
+        </script>
+    </body>
+</html>
