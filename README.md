@@ -42,8 +42,14 @@ To see all Java versions amd its paths to use:
 sudo update-java-alternatives --list
 ```
 
+
 # Running the app
 
 ```
 mvn spring-boot:run
 ```
+
+
+# Accessing the application
+
+Ia a browser, pĺease access the address [http://127.0.0.1:8080](http://127.0.0.1:8080).
