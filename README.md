@@ -20,3 +20,10 @@ With these Java versions:
 - **8 (or 1.8)**: **not** working;
 - **17**: working;
 - **21**: working.
+
+
+# Running the app
+
+```
+mvn spring-boot:run
+```
