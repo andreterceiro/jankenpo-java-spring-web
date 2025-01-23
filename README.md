@@ -10,7 +10,7 @@ Jankenpo game in Java with the Spring Framework
 
 # Attention
 
-**Please pay attention if the port 8080 is free**
+**Please pay attention. Please check if the port 8080 is free**
 
 
 # Java versions
