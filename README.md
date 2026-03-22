@@ -36,7 +36,7 @@ Example:
 sudo update-java-alternatives /usr/lib/jvm/java-1.17.0-openjdk-amd64
 ```
 
-To see all Java versions amd its paths to use:
+To see all Java versions and its paths to use:
 
 ```
 sudo update-java-alternatives --list
