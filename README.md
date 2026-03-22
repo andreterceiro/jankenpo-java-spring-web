@@ -46,6 +46,11 @@ sudo update-java-alternatives --list
 
 If you do not have Maven installed, please before trying to run this app, install Maven.
 
+I used this command to install Maven on Xubuntu 22.04:
+
+```sh
+sudo apt install maven
+```
 
 
 # Running the app
