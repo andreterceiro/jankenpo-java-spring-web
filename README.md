@@ -60,6 +60,11 @@ mvn spring-boot:run
 ```
 
 
+# Note: command to install dependencies before run the app
+
+You do not need a special command to install dependencies before run the app.
+
+
 # Accessing the application
 
 Ia a browser, pĺease access the address [http://127.0.0.1:8080](http://127.0.0.1:8080).
