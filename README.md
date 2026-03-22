@@ -42,6 +42,11 @@ To see all Java versions and its paths to use:
 sudo update-java-alternatives --list
 ```
 
+# Maven
+
+If you do not have Maven installed, please before trying to run this app, install Maven.
+
+
 
 # Running the app
 
